@@ -4,18 +4,33 @@ For curiosity sake I've compared the performance of rendering our poker chips in
 
 ## Results:
 
-`Angular`: ~35ms per rerender of a $499999 chip stack
+These values were tested on the default `Production` builds of each approach. For a small stack size, it's
+basically impossible to tell the difference visually. But with the 5 stacks test, it is extremely noticeable.
 
-`Rust`: ~30μs per rerender of a $499999 chip stack
+### Rerender of `1 x $4,999,999` chip stack
 
-**Yes you are seeing ^this right, milliseconds to microseconds**
+<img src="./assets/1-stack.png" alt="single chip stack" width="250"/>
 
-## Usage
+`Angular`
 
-If you wish to serve the rust app locally follow these steps.
+- ~25ms per rerender
 
-1. Install rust `https://www.rust-lang.org/tools/install`
-2. Install trunk `cargo install --locked trunk`
-3. Serve app `trunk serve` at http://localhost:8080
+`Rust`
 
-![Image of web app](./assets/img.png)
+- ~1ms per rerender
+
+### Rerender of `5 x $4,999,999` chip stacks
+
+<img src="./assets/5-stack.png" alt="5 chip stacks" width="250"/>
+
+`Angular`
+
+- ~130ms per rerender
+
+  ![Profiler of angular 5x](./assets/angular-5x.png)
+
+`Rust`
+
+- ~2.5ms per rerender
+
+  ![Profiler of angular 5x](./assets/wasm-5x.png)

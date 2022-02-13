@@ -19,7 +19,7 @@ impl Component for App {
     type Properties = ();
 
     fn create(_ctx: &Context<Self>) -> Self {
-        Self { chips: 1 }
+        Self { chips: 499999 }
     }
 
     /// Handle the `Msg` of the app
@@ -66,6 +66,7 @@ impl Component for App {
                     <button onclick={decrement}>{"-"}</button>
                 </div>
                 <Chips amount={self.chips}/>
+                <div style="margin-top:8em;"></div>
             </div>
         }
     }
