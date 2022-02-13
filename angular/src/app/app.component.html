@@ -1,0 +1,15 @@
+<div style="margin-left: 3em">
+  <div class="controls">
+    <label for="amount">Amount</label>
+    <input
+      id="amount"
+      type="number"
+      (change)="update($event)"
+      [value]="chips"
+    />
+    <button (click)="increment()">+</button>
+    <button (click)="decrement()">-</button>
+  </div>
+  <div style="margin-top: 8em"></div>
+  <poker-moons-chips [amount]="chips"></poker-moons-chips>
+</div>
