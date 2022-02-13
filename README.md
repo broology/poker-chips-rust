@@ -1,4 +1,4 @@
-# PokerMoons Chip Display in W.A.S.M. via RUST
+# PokerMoons Chip Display in Angular vs WASM
 
 The poker moons chip display takes in a dollar amount, and calculates the individual stacks of poker chips to visualize that amount given the poker chip denominations.
 
