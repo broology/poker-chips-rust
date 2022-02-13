@@ -15,7 +15,7 @@ basically impossible to tell the difference visually. But with the 5 stacks test
 
 - ~25ms per rerender
 
-`Rust`
+`WASM/Rust`
 
 - ~1ms per rerender
 
@@ -29,7 +29,7 @@ basically impossible to tell the difference visually. But with the 5 stacks test
 
   ![Profiler of angular 5x](./assets/angular-5x.png)
 
-`Rust`
+`WASM/Rust`
 
 - ~2.5ms per rerender
 
